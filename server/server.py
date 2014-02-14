@@ -14,5 +14,5 @@ class TCPHandler(SocketServer.BaseRequestHandler):
         self.request.sendall(self.data.upper())
 
 if __name__ == "__main__":
-    server = SocketServer.TCPServer((config['host'], config['port']), TCPHandler)
+    server = SocketServer.TCPServer((config.config['host'], config.config['port']), TCPHandler)
     server.serve_forever()
